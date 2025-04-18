@@ -20,13 +20,13 @@ This repository contains tools and scripts to manage Salesforce metadata related
 
 ## Usage
 
-## For source org (where you're exporting from)
+## Login for source org (where you're exporting from)
 
 ```
 & "C:\Program Files\sf\bin\sf.cmd" org login web --alias mysourceorg --instance-url https://login.salesforce.com
 ```
 
-## For target org (where you're deploying to)
+## login for target org (where you're deploying to)
 
 ```
 & "C:\Program Files\sf\bin\sf.cmd" org login web --alias mytargetorg --instance-url https://login.salesforce.com
