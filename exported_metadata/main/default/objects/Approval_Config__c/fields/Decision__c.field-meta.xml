@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Decision__c</fullName>
+    <description>Tracks the decision made in approval flow</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Either Accept or Deny</inlineHelpText>
+    <label>Decision</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accept</fullName>
+                <default>false</default>
+                <label>Accept</label>
+            </value>
+            <value>
+                <fullName>Deny</fullName>
+                <default>false</default>
+                <label>Deny</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

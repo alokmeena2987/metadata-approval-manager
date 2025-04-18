@@ -1,0 +1,12 @@
+{
+  "packageDirectories": [
+    {
+      "path": "exported_metadata",
+      "default": true
+    }
+  ],
+  "name": ".",
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "62.0"
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Stores conditional approval configuration settings for flows and lightning pages.</description>
+    <label>Approval Settings Metadata</label>
+    <pluralLabel>Approval Settings Metadatas</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

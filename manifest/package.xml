@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+  <types>
+    <members>ApprovalFormController</members>
+    <name>ApexClass</name>
+  </types>
+  <types>
+    <members>approvalForm</members>
+    <name>LightningComponentBundle</name>
+  </types>
+  <types>
+    <members>Approval_Config_Record__c</members>
+    <name>CustomObject</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>CustomField</name>
+  </types>
+  <types>
+    <members>*</members>
+    <name>FlexiPage</name> 
+  </types>
+  <version>60.0</version>
+</Package>

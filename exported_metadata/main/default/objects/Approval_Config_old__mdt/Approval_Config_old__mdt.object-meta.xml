@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Stores metadata records for flow-based approval decisions.</description>
+    <label>Approval Config old</label>
+    <pluralLabel>Approval Configs old</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

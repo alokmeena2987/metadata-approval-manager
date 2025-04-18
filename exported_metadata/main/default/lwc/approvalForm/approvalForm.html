@@ -1,0 +1,88 @@
+<template>
+    <lightning-card>
+        <div class="card-body slds-p-around_medium">
+            <!-- Loading Spinner -->
+            <template if:true={isLoading}>
+                <div class="spinner-container">
+                    <lightning-spinner alternative-text="Loading" size="medium" variant="brand"></lightning-spinner>
+                </div>
+            </template>
+
+            <div class="form-container">
+                <!-- Header -->
+                <div class="form-header">
+                    <lightning-icon icon-name="standard:approval" size="medium" alternative-text="Approval" class="header-icon"></lightning-icon>
+                    <h1 class="header-title">Approval Request Form</h1>
+                </div>
+
+                <!-- Approval Type Dropdown -->
+                <div class="form-section">
+                    <h2 class="section-title">Select Approval Type</h2>
+                    <p class="section-description">Choose the type of approval you need to process.</p>
+                    <lightning-combobox
+                        name="approvalType"
+                        label="Approval Type"
+                        value={selectedApprovalType}
+                        placeholder="Choose an approval type"
+                        options={approvalTypeOptions}
+                        onchange={handleApprovalTypeChange}
+                        class="modern-input">
+                    </lightning-combobox>
+                </div>
+
+                <!-- Config Dropdown (only shown when approval type is selected) -->
+                <template if:true={showConfigs}>
+                    <div class="form-section">
+                        <h2 class="section-title">Select Configuration</h2>
+                        <p class="section-description">Choose the specific configuration for this approval request.</p>
+                        <lightning-combobox
+                            name="configName"
+                            label="Configuration"
+                            value={selectedConfigId}
+                            placeholder="Choose a configuration"
+                            options={configOptions}
+                            onchange={handleConfigChange}
+                            class="modern-input">
+                        </lightning-combobox>
+                    </div>
+                </template>
+
+                <!-- Decision Radio Buttons with Icons -->
+                <div class="form-section">
+                    <h2 class="section-title">Make Your Decision</h2>
+                    <p class="section-description">Please select whether to accept or deny this request.</p>
+                    <div class="decision-options">
+                        <div class="decision-option accept" onclick={handleAcceptClick}>
+                            <div class={acceptButtonClass}>
+                                <lightning-icon icon-name="utility:check" size="medium" alternative-text="Accept"></lightning-icon>
+                            </div>
+                            <span class="option-label">Accept</span>
+                        </div>
+                        <div class="decision-option deny" onclick={handleDenyClick}>
+                            <div class={denyButtonClass}>
+                                <lightning-icon icon-name="utility:close" size="medium" alternative-text="Deny"></lightning-icon>
+                            </div>
+                            <span class="option-label">Deny</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-section submit-section">
+                    <button class="submit-button" onclick={handleSubmit} disabled={isSubmitDisabled}>
+                        <lightning-icon icon-name="utility:send" size="small" alternative-text="Submit" class="submit-icon"></lightning-icon>
+                        Submit Decision
+                    </button>
+                </div>
+            </div>
+
+            <!-- Success Message -->
+            <template if:true={showSuccess}>
+                <div class="success-message">
+                    <lightning-icon icon-name="utility:success" alternative-text="Success" size="small" class="success-icon"></lightning-icon>
+                    <span>Decision submitted successfully!</span>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
